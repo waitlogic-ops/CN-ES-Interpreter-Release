@@ -6,9 +6,21 @@ CN-ES Interpreter（同声传译）是一款面向真实会议、跨境沟通和
 
 当前版本：`v0.10.0-dev.086`
 
-- macOS Apple Silicon：[`同声传译-086-macos-arm64.zip`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.086/%E5%90%8C%E5%A3%B0%E4%BC%A0%E8%AF%91-086-macos-arm64.zip)
+- macOS Apple Silicon：[`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.086/CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip)
 - 发布页面：[`v0.10.0-dev.086`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/tag/v0.10.0-dev.086)
 - 校验文件：[`CHECKSUMS.txt`](CHECKSUMS.txt)
+
+## 客户介绍图
+
+![同声传译客户介绍册封面](assets/cn-es-interpreter-customer-01.png)
+
+![客户只需看懂 3 步](assets/cn-es-interpreter-customer-02.png)
+
+![同传模式展示](assets/cn-es-interpreter-customer-03.png)
+
+![单向翻译展示](assets/cn-es-interpreter-customer-04.png)
+
+![会议同传工作台定位](assets/cn-es-interpreter-customer-05.png)
 
 ## 适用场景
 
