@@ -6,7 +6,8 @@ CN-ES Interpreter（同声传译）是一款面向真实会议、跨境沟通和
 
 当前版本：`v0.10.0-dev.086`
 
-- macOS Apple Silicon：[`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.086/CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip)
+- macOS Apple Silicon DMG：[`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.dmg`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.086/CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.dmg)
+- 备用 ZIP：[`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.086/CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip)
 - 发布页面：[`v0.10.0-dev.086`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/tag/v0.10.0-dev.086)
 - 校验文件：[`CHECKSUMS.txt`](CHECKSUMS.txt)
 
@@ -39,8 +40,8 @@ CN-ES Interpreter（同声传译）是一款面向真实会议、跨境沟通和
 
 ## 安装提醒
 
-1. 下载并解压 `同声传译-086-macos-arm64.zip`。
-2. 将 App 放入“应用程序”文件夹。
+1. 下载并打开 `CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.dmg`。
+2. 将 `CN-ES Interpreter.app` 拖入“Applications / 应用程序”文件夹。
 3. 首次运行时，根据 macOS 提示允许打开，并授予麦克风权限。
 4. 如需使用翻译、语音或会议纪要能力，请在应用内配置对应服务。
 

@@ -4,10 +4,12 @@
 
 ## 下载信息
 
-- 文件名：`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip`
+- 推荐下载：`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.dmg`
+- 备用下载：`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip`
 - 平台：macOS Apple Silicon / arm64
-- 文件大小：约 51 MB
-- SHA-256：`680aee274166a6c422d98884675e99298f915e3827f40b6c4d8a4fa7f2aba917`
+- DMG 文件大小：约 55 MB
+- DMG SHA-256：`175f3757ce602e383dc354154d72c2c46649526650862d30e52d2f82c58922fc`
+- ZIP SHA-256：`680aee274166a6c422d98884675e99298f915e3827f40b6c4d8a4fa7f2aba917`
 
 ## 客户介绍图
 
@@ -37,3 +39,5 @@ CN-ES Interpreter 把跨语言会议中的常用动作整合在同一个工作�
 - 扫描路径数：293
 
 未发现 `.env`、常见 API Key、Token、私钥或硬编码凭据。
+
+DMG 由已扫描通过的 ZIP/App 产物生成，并已通过 `hdiutil verify` 完整性校验。
