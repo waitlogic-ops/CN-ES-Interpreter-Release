@@ -5,11 +5,11 @@
 ## 固定来源
 
 - 来源项目：`CN-ES-Interpreter`
-- 本地来源目录：`../Good-Interpreter`
+- 本地来源目录：`../../../VSCODE/Good-Interpreter`
 - 来源 GitHub 仓库：`https://github.com/waitlogic-ops/CN-ES-Interpreter.git`
 - 发布页 GitHub 仓库：`https://github.com/waitlogic-ops/CN-ES-Interpreter-Release`
 
-本地源码目录名目前是 `Good-Interpreter`，但它的 `origin` 远端必须是 `waitlogic-ops/CN-ES-Interpreter`。同步脚本会强制检查这个远端，防止把其他项目成果发布到这里。
+本地源码目录名目前是 `/Users/spoffish/VSCODE/Good-Interpreter`，但它的 `origin` 远端必须是 `waitlogic-ops/CN-ES-Interpreter`。同步脚本会强制检查这个远端，防止把其他项目成果发布到这里。
 
 ## 边界
 

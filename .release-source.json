@@ -1,6 +1,6 @@
 {
   "source_project_name": "CN-ES-Interpreter",
-  "source_local_path": "../Good-Interpreter",
+  "source_local_path": "../../../VSCODE/Good-Interpreter",
   "source_remote": "https://github.com/waitlogic-ops/CN-ES-Interpreter.git",
   "release_repository": "waitlogic-ops/CN-ES-Interpreter-Release",
   "release_tag_pattern": "v*"
