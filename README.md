@@ -11,6 +11,18 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 - 完整发布页：[`v0.10.0-dev.086`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/tag/v0.10.0-dev.086)
 - 文件校验：[`CHECKSUMS.txt`](CHECKSUMS.txt)
 
+## 产品预览
+
+![CN-ES Interpreter 产品介绍](assets/cn-es-interpreter-brief-01.png)
+
+![CN-ES Interpreter 使用流程](assets/cn-es-interpreter-brief-02.png)
+
+![CN-ES Interpreter 同传模式](assets/cn-es-interpreter-brief-03.png)
+
+![CN-ES Interpreter 单向翻译](assets/cn-es-interpreter-brief-04.png)
+
+![CN-ES Interpreter 会议同传工作台](assets/cn-es-interpreter-brief-05.png)
+
 ## 适合做什么
 
 - 跨语言商务会议和外贸沟通
@@ -35,4 +47,4 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 
 ## 介绍素材
 
-发布附件中包含 5 张产品介绍图，可用于会前沟通、演示说明或转发介绍。
+上方 5 张产品介绍图也已放在发布附件中，可单独下载。
