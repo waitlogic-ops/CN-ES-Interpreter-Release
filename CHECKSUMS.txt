@@ -1,2 +1,2 @@
-ee4d04930d675e43a65f0130b9acaab95dbed0d14dc7a6618a546130e300e617  CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.dmg
-680aee274166a6c422d98884675e99298f915e3827f40b6c4d8a4fa7f2aba917  CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip
+edf9ba8713e411f4cc5d053e25c0c774792d645d3dfbebf9797ca6700a5b2103  CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.dmg
+e521e928e507dfbd5921f890053160b622a99f9b04efeb1a23356cf9c1899cf1  CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.zip

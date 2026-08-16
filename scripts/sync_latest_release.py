@@ -180,7 +180,27 @@ def copy_release_files(tag: str, dmg: Path, zip_path: Path | None) -> tuple[str,
     return sha256(dmg_target), sha256(zip_target) if zip_target else None
 
 
-def write_text_files(tag: str, dmg_sha: str, zip_sha: str | None) -> None:
+def load_user_guide(source_dir: Path) -> str:
+    guide_path = source_dir / "docs" / "USER_GUIDE.md"
+    if not guide_path.exists():
+        return ""
+
+    guide = guide_path.read_text(encoding="utf-8").strip()
+    (ROOT / "USER_GUIDE.md").write_text(guide + "\n", encoding="utf-8")
+
+    lines = guide.splitlines()
+    if lines and lines[0].startswith("# "):
+        lines = lines[1:]
+    body = "\n".join(lines).strip()
+    return re.sub(
+        r"^(#{1,5}) ",
+        lambda match: "#" * (len(match.group(1)) + 1) + " ",
+        body,
+        flags=re.MULTILINE,
+    )
+
+
+def write_text_files(tag: str, dmg_sha: str, zip_sha: str | None, user_guide: str) -> None:
     dmg_name = f"CN-ES-Interpreter-{tag}-macos-arm64.dmg"
     zip_name = f"CN-ES-Interpreter-{tag}-macos-arm64.zip"
     release_url = f"https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/{tag}"
@@ -233,6 +253,10 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 2. 将 `CN-ES Interpreter.app` 拖入“Applications / 应用程序”文件夹。
 3. 首次运行时，根据 macOS 提示允许打开，并授予麦克风权限。
 4. 按应用内提示配置所需的翻译、语音或会议纪要服务。
+
+## 使用说明
+
+{user_guide if user_guide else "使用说明会随来源项目的 `docs/USER_GUIDE.md` 同步更新。"}
 
 ## 介绍素材
 
@@ -293,6 +317,7 @@ def publish(tag: str, dmg: Path, zip_path: Path | None) -> None:
             "-A",
             ".gitignore",
             "README.md",
+            "USER_GUIDE.md",
             "CHECKSUMS.txt",
             str(notes.name),
             "RELEASE_NOTES_*.md",
@@ -378,7 +403,8 @@ def main() -> None:
     dmg_sha, zip_sha = copy_release_files(tag, dmg_path, zip_path)
     dist_dmg = ROOT / "dist" / f"CN-ES-Interpreter-{tag}-macos-arm64.dmg"
     dist_zip = ROOT / "dist" / f"CN-ES-Interpreter-{tag}-macos-arm64.zip"
-    write_text_files(tag, dmg_sha, zip_sha)
+    user_guide = load_user_guide(source_dir)
+    write_text_files(tag, dmg_sha, zip_sha, user_guide)
 
     print(f"source={source_dir}")
     print(f"version={tag}")
