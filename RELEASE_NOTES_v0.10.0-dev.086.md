@@ -7,8 +7,7 @@
 - 推荐下载：`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.dmg`
 - 备用下载：`CN-ES-Interpreter-v0.10.0-dev.086-macos-arm64.zip`
 - 平台：macOS Apple Silicon / arm64
-- DMG 文件大小：约 55 MB
-- DMG SHA-256：`175f3757ce602e383dc354154d72c2c46649526650862d30e52d2f82c58922fc`
+- DMG SHA-256：`ee4d04930d675e43a65f0130b9acaab95dbed0d14dc7a6618a546130e300e617`
 - ZIP SHA-256：`680aee274166a6c422d98884675e99298f915e3827f40b6c4d8a4fa7f2aba917`
 
 ## 功能亮点
@@ -25,10 +24,4 @@
 
 ## 附件
 
-本发布页包含：
-
-- macOS DMG 安装包
-- ZIP 备用包
-- 5 张产品介绍图
-
-DMG 已通过完整性校验，安装包已完成发布前安全扫描，未发现 `.env`、常见 API Key、Token、私钥或硬编码凭据。
+本发布页包含 macOS DMG 安装包、ZIP 备用包和 5 张产品介绍图。
