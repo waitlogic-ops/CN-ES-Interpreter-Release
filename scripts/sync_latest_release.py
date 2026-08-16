@@ -299,7 +299,7 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 
 ## 附件
 
-本发布页包含 macOS DMG 安装包、ZIP 备用包和 5 张产品介绍图。
+本发布页附件只包含 macOS DMG 安装包和 ZIP 备用包。
 """
     notes_path = ROOT / f"RELEASE_NOTES_{tag}.md"
     for old in ROOT.glob("RELEASE_NOTES_v*.md"):
@@ -374,8 +374,6 @@ def publish(tag: str, dmg: Path, zip_path: Path | None) -> None:
     ]
     if zip_path:
         upload.insert(4, str(zip_path))
-    for image in sorted((ROOT / "assets").glob("cn-es-interpreter-brief-*.png")):
-        upload.insert(-3, str(image))
     run(upload, cwd=ROOT)
 
 
