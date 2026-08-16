@@ -185,12 +185,35 @@ def copy_release_files(tag: str, dmg: Path, zip_path: Path | None) -> tuple[str,
     return sha256(dmg_target), sha256(zip_target) if zip_target else None
 
 
+def add_release_faq(guide: str) -> str:
+    faq_items = [
+        (
+            "### 为什么默认只显示文字翻译？",
+            "默认采用文字显示翻译，避免语音转语音在忘记关闭时持续消耗 token；需要语音播报时可手动点击喇叭开启。",
+        ),
+        (
+            "### 为什么建议西语场景优先使用单向翻译？",
+            "双向同传会同时开启两个方向的识别、翻译和播报链路，token 消耗相对更高。西语场景如果主要由一方控制发言方向，建议使用单向翻译，按需切换方向，减少不必要的双链路消耗。",
+        ),
+    ]
+    marker = "## 6. 常见问题\n"
+    if marker not in guide:
+        return guide
+    addition = ""
+    for title, body in faq_items:
+        if body not in guide:
+            addition += f"\n{title}\n\n{body}\n"
+    if not addition:
+        return guide
+    return guide.replace(marker, marker + addition, 1)
+
+
 def load_user_guide(source_dir: Path) -> str:
     guide_path = source_dir / "docs" / "USER_GUIDE.md"
     if not guide_path.exists():
         return ""
 
-    guide = guide_path.read_text(encoding="utf-8").strip()
+    guide = add_release_faq(guide_path.read_text(encoding="utf-8").strip())
     (ROOT / "USER_GUIDE.md").write_text(guide + "\n", encoding="utf-8")
 
     lines = guide.splitlines()
@@ -247,9 +270,10 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 ## 主要能力
 
 - **实时同传**：持续识别说话内容，生成双语字幕。
+- **音色跟随**：语音播报可尽量模仿说话者音色，让跨语言沟通更自然。
 - **单向翻译**：在演示、培训或嘈杂环境中手动锁定输入方向。
 - **多端同步**：Mac 主控开始后，手机、Web 和大屏可以同步查看字幕。
-- **语音与字幕分离**：可按现场需要关闭播报，只保留字幕和记录。
+- **语音与字幕分离**：可按现场需要开启或关闭语音播报，只保留字幕和记录。
 - **本地配置**：翻译、语音和大模型服务配置保留在本机。
 
 ## 安装
