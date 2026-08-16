@@ -265,7 +265,7 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 
 ## 介绍素材
 
-上方 5 张产品介绍图也已放在发布附件中，可单独下载。
+上方 5 张产品介绍图仅用于主页展示，不作为版本附件上传。
 """
     (ROOT / "README.md").write_text(readme, encoding="utf-8")
 
