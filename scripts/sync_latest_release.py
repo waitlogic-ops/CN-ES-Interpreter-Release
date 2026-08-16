@@ -259,6 +259,13 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 3. 首次运行时，根据 macOS 提示允许打开，并授予麦克风权限。
 4. 按应用内提示配置所需的翻译、语音或会议纪要服务。
 
+补充说明：如果首次打开时出现“无法打开，因为 Apple 无法检查其是否包含恶意软件”或“来自身份不明的开发者”等提示，请打开“Applications / 应用程序”文件夹，找到 `CN-ES Interpreter.app`，按住 Control 键点击应用图标，或右键点击应用图标，选择“打开”，并在弹出的确认窗口中再次点击“打开”。如果仍然不能打开，请进入“系统设置” → “隐私与安全性”，在页面下方找到被拦截的 `CN-ES Interpreter.app`，点击“仍要打开”，然后回到应用程序文件夹再次打开应用。也可以打开“终端”执行下面命令后再打开应用：
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/CN-ES Interpreter.app"
+open "/Applications/CN-ES Interpreter.app"
+```
+
 ## 使用说明
 
 {user_guide if user_guide else "使用说明会随来源项目的 `docs/USER_GUIDE.md` 同步更新。"}
