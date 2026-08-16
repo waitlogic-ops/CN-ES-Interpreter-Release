@@ -185,6 +185,18 @@ def copy_release_files(tag: str, dmg: Path, zip_path: Path | None) -> tuple[str,
     return sha256(dmg_target), sha256(zip_target) if zip_target else None
 
 
+DOUBAO_QUOTA_NOTE = "费用提示：豆包注册后可获得 10 亿 token 免费额度，个人用户通常可以免费使用一段时间；具体额度、有效期和抵扣范围以火山引擎控制台显示为准。"
+
+
+def add_doubao_quota_note(guide: str) -> str:
+    if DOUBAO_QUOTA_NOTE in guide:
+        return guide
+    marker = "获取步骤："
+    if marker not in guide:
+        return guide
+    return guide.replace(marker, DOUBAO_QUOTA_NOTE + "\n\n" + marker, 1)
+
+
 def add_release_faq(guide: str) -> str:
     faq_items = [
         (
@@ -213,7 +225,7 @@ def load_user_guide(source_dir: Path) -> str:
     if not guide_path.exists():
         return ""
 
-    guide = add_release_faq(guide_path.read_text(encoding="utf-8").strip())
+    guide = add_release_faq(add_doubao_quota_note(guide_path.read_text(encoding="utf-8").strip()))
     (ROOT / "USER_GUIDE.md").write_text(guide + "\n", encoding="utf-8")
 
     lines = guide.splitlines()

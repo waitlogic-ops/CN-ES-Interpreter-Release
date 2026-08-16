@@ -78,6 +78,8 @@ open "/Applications/CN-ES Interpreter.app"
 - 豆包 / 火山同声传译 2.0 旧版 API 文档：[https://docs.volcengine.com/docs/6561/1756902?lang=zh](https://docs.volcengine.com/docs/6561/1756902?lang=zh)
 - 火山音频技术应用管理说明：[https://www.volcengine.com/docs/6489/75565?lang=zh](https://www.volcengine.com/docs/6489/75565?lang=zh)
 
+费用提示：豆包注册后可获得 10 亿 token 免费额度，个人用户通常可以免费使用一段时间；具体额度、有效期和抵扣范围以火山引擎控制台显示为准。
+
 获取步骤：
 
 1. 登录火山引擎控制台。
