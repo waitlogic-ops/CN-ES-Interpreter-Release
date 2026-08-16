@@ -170,11 +170,13 @@ def copy_release_files(tag: str, dmg: Path, zip_path: Path | None) -> tuple[str,
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
     dmg_target = dist / f"CN-ES-Interpreter-{tag}-macos-arm64.dmg"
-    shutil.copy2(dmg, dmg_target)
+    if dmg.resolve() != dmg_target.resolve():
+        shutil.copy2(dmg, dmg_target)
     zip_target = None
     if zip_path:
         zip_target = dist / f"CN-ES-Interpreter-{tag}-macos-arm64.zip"
-        shutil.copy2(zip_path, zip_target)
+        if zip_path.resolve() != zip_target.resolve():
+            shutil.copy2(zip_path, zip_target)
     return sha256(dmg_target), sha256(zip_target) if zip_target else None
 
 
@@ -284,7 +286,23 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 
 def publish(tag: str, dmg: Path, zip_path: Path | None) -> None:
     notes = ROOT / f"RELEASE_NOTES_{tag}.md"
-    run(["git", "add", "README.md", "CHECKSUMS.txt", str(notes.name), "assets", "SOURCE_PROJECT.md", ".release-source.json", "scripts/sync_latest_release.py"], cwd=ROOT)
+    run(
+        [
+            "git",
+            "add",
+            "-A",
+            ".gitignore",
+            "README.md",
+            "CHECKSUMS.txt",
+            str(notes.name),
+            "RELEASE_NOTES_*.md",
+            "assets",
+            "SOURCE_PROJECT.md",
+            ".release-source.json",
+            "scripts/sync_latest_release.py",
+        ],
+        cwd=ROOT,
+    )
     if run(["git", "status", "--short"], cwd=ROOT, capture=True):
         run(["git", "commit", "-m", f"同步 {tag} 发布页"], cwd=ROOT)
         run(["git", "push"], cwd=ROOT)
@@ -349,6 +367,9 @@ def main() -> None:
     tag = args.version or latest_tag(source_dir, config["release_tag_pattern"])
     zip_path = find_artifact(source_dir, tag, "zip")
     dmg_path = find_artifact(source_dir, tag, "dmg")
+    existing_dmg = ROOT / "dist" / f"CN-ES-Interpreter-{tag}-macos-arm64.dmg"
+    if not dmg_path and existing_dmg.exists():
+        dmg_path = existing_dmg
     if not dmg_path:
         if not zip_path:
             raise SystemExit(f"没有找到 {tag} 的 DMG 或 ZIP 成果包。")
