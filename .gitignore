@@ -8,3 +8,4 @@ dist/
 node_modules/
 build/
 target/
+.release-source.local.json

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync the standalone release page from the bound CN-ES-Interpreter project."""
+"""Sync the standalone customer release page from a private local source."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = ROOT / ".release-source.json"
+CONFIG_PATH = ROOT / ".release-source.local.json"
 VERSION_RE = re.compile(r"^v(\d+)\.(\d+)\.(\d+)(?:-dev\.(\d+))?$")
 
 
@@ -43,6 +43,11 @@ def run(
 
 
 def load_config() -> dict[str, str]:
+    if not CONFIG_PATH.exists():
+        raise SystemExit(
+            "缺少本机私有同步配置：.release-source.local.json\n"
+            "该文件不会提交到 GitHub。"
+        )
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
@@ -322,8 +327,6 @@ def publish(tag: str, dmg: Path, zip_path: Path | None) -> None:
             str(notes.name),
             "RELEASE_NOTES_*.md",
             "assets",
-            "SOURCE_PROJECT.md",
-            ".release-source.json",
             "scripts/sync_latest_release.py",
         ],
         cwd=ROOT,
@@ -406,7 +409,6 @@ def main() -> None:
     user_guide = load_user_guide(source_dir)
     write_text_files(tag, dmg_sha, zip_sha, user_guide)
 
-    print(f"source={source_dir}")
     print(f"version={tag}")
     print(f"dmg={dist_dmg}")
     if zip_sha:
