@@ -4,11 +4,11 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 
 ## 下载
 
-当前版本：`v0.10.0-dev.090`
+当前版本：`v0.10.0-dev.092`
 
-- 推荐下载：[`CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.dmg`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.090/CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.dmg)
-- 备用 ZIP：[`CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.zip`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.090/CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.zip)
-- 完整发布页：[`v0.10.0-dev.090`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/tag/v0.10.0-dev.090)
+- 推荐下载：[`CN-ES-Interpreter-v0.10.0-dev.092-macos-arm64.dmg`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.092/CN-ES-Interpreter-v0.10.0-dev.092-macos-arm64.dmg)
+- 备用 ZIP：[`CN-ES-Interpreter-v0.10.0-dev.092-macos-arm64.zip`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/download/v0.10.0-dev.092/CN-ES-Interpreter-v0.10.0-dev.092-macos-arm64.zip)
+- 完整发布页：[`v0.10.0-dev.092`](https://github.com/waitlogic-ops/CN-ES-Interpreter-Release/releases/tag/v0.10.0-dev.092)
 - 文件校验：[`CHECKSUMS.txt`](CHECKSUMS.txt)
 
 ## 产品预览
@@ -41,7 +41,7 @@ CN-ES Interpreter 是一款面向会议、培训、商务沟通和现场展示�
 
 ## 安装
 
-1. 下载并打开 `CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.dmg`。
+1. 下载并打开 `CN-ES-Interpreter-v0.10.0-dev.092-macos-arm64.dmg`。
 2. 将 `CN-ES Interpreter.app` 拖入“Applications / 应用程序”文件夹。
 3. 首次运行时，根据 macOS 提示允许打开，并授予麦克风权限。
 4. 按应用内提示配置所需的翻译、语音或会议纪要服务。

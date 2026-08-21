@@ -1,14 +1,14 @@
-# CN-ES Interpreter v0.10.0-dev.090
+# CN-ES Interpreter v0.10.0-dev.092
 
 本版本提供 macOS Apple Silicon 版本下载，适用于中文、西班牙语和英语场景下的会议同传、培训字幕、商务沟通和现场展示。
 
 ## 下载
 
-- 推荐下载：`CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.dmg`
-- 备用下载：`CN-ES-Interpreter-v0.10.0-dev.090-macos-arm64.zip`
+- 推荐下载：`CN-ES-Interpreter-v0.10.0-dev.092-macos-arm64.dmg`
+- 备用下载：`CN-ES-Interpreter-v0.10.0-dev.092-macos-arm64.zip`
 - 平台：macOS Apple Silicon / arm64
-- DMG SHA-256：`edf9ba8713e411f4cc5d053e25c0c774792d645d3dfbebf9797ca6700a5b2103`
-- ZIP SHA-256：`e521e928e507dfbd5921f890053160b622a99f9b04efeb1a23356cf9c1899cf1`
+- DMG SHA-256：`0548e5ffe069ef584622fed6ee2d08a58ba6eb5806cc34af24334bd2ab702a5c`
+- ZIP SHA-256：`3a1c7416c20ee84384bae4708a715f764dbe86cd91ae294cdb1dbc5e5375a389`
 
 ## 功能亮点
 
